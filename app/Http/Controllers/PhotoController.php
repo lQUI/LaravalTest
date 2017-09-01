@@ -13,7 +13,7 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+      //
       //  return 'photoContoller';
     }
 
@@ -35,7 +35,12 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'username' => 'required|max:12',
+            'age' => 'required',
+        ]);
+
+        return 'success';
     }
 
     /**
@@ -46,7 +51,7 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

@@ -38,15 +38,15 @@ class Kernel extends HttpKernel
         ],
 
         'check' => [
-             \App\Http\Middleware\CheckAge::class,
-             \App\Http\Middleware\CheckRole::class,
-        ],
+           \App\Http\Middleware\CheckAge::class,
+           \App\Http\Middleware\CheckRole::class,
+       ],
 
-        'api' => [
-            'throttle:60,1',
-            'bindings',
-        ],
-    ];
+       'api' => [
+        'throttle:60,1',
+        'bindings',
+    ],
+];
 
     /**
      * The application's route middleware.
@@ -62,7 +62,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-	'checkage'=> \App\Http\Middleware\CheckAge::class,
+        'checkage'=> \App\Http\Middleware\CheckAge::class,
         'checkrole'=> \App\Http\Middleware\CheckRole::class,
     ];
 }
