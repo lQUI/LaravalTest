@@ -6,7 +6,7 @@ Before installing,you must be sure that  [php7](http://php.net/downloads.php) ,[
 
 Also,you can use [this](https://github.com/genxium/Ubuntu14InitScripts/tree/master/backend/php7) to install those;
 
-Then,you can clone my respository with Terminal or CMD
+Then,you can clone my respository with Terminal or CMD<br/>
 <code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>
 <code>$ cd LaravalTest </code><br/>
 <code>$ composer install</code><br/>
@@ -23,5 +23,5 @@ Finished
 
 3.访问 [http://localhost:8000/user/Tom](http://localhost:8000/user/Tom)  ,此时浏览器显示Tom，如果Tom换成了包含除了英文字母之外的符号,将抛出NotFoundHttpException。
 
-4.
+4.访问 [http://localhost:8000/form](http://localhost:8000/form),会显示一个表单，该表单的验证规则为：username为必填且必须少于12个字符，age为必填且必须不小于16且不大于100，email可以不填但必须为email格式.通过验证显示“success”
 

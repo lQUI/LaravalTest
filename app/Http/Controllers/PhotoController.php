@@ -37,7 +37,8 @@ class PhotoController extends Controller
     {
         $this->validate($request, [
             'username' => 'required|max:12',
-            'age' => 'required',
+            'age' => 'required|integer|between:16,100',
+            'email' => 'email'
         ]);
 
         return 'success';
@@ -51,7 +52,7 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
