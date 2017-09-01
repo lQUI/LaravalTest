@@ -7,12 +7,11 @@ Before installing,you must be sure that  [php7](http://php.net/downloads.php) ,[
 Also,you can use [this](https://github.com/genxium/Ubuntu14InitScripts/tree/master/backend/php7) to install those;
 
 Then,you can clone my respository with Terminal or CMD
-<code>$ git clone https://github.com/lQUI/LaravalTest </br>
-<code>$ cd LaravalTest </br>
-<code>$ composer install</br>
-<code>$ php artisan serve</br>
-and it is working if you can see 'Laravel development server started: <http://127.0.0.1:8000>
-'
+<code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>
+<code>$ cd LaravalTest </code><br/>
+<code>$ composer install</code><br/>
+<code>$ php artisan serve</code><br/>
+and it is working if you can see 'Laravel development server started:<http://127.0.0.1:8000>'
 ***
 
 Finished
