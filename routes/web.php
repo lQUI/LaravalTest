@@ -12,24 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hello World!';
 });
 
 Route::post('/', function () {
-	return 'get a post requied';
+    return 'get a post requied';
 });
 
 Route::delete('/', function () {
-	return 'get a delete request';
+    return 'get a delete request';
 });
 
 Route::get('/user', function () {
-	return 'hello World!';
+    return 'pass!!!';
 })->middleware('checkage');
 
 
 Route::get('/check',function () {
-	return 'pass!!!';
+    return 'pass!!!';
 })->middleware('checkrole:editor');
 
 //Route::get('user/{id}', function ($id) {
@@ -37,8 +37,24 @@ Route::get('/check',function () {
 //});
 
 
+Route::get('user/{name}', function ($name) {
+        return $name;
+})->where('name','[A-Z,a-z]+');
 
+Route::domain('{acount}.myapp.com')->group(function () {
+    Route::get('user/{id}',function ($account,$id) {
+        return $account.$id;
+    });
+});
 
+Route::prefix('admin')->group(function () {
+    Route::get('users', function () {
+        return 'admin user';
+    });
+});
 
-//Route::resource('photos','PhotoController');
+Route::get('api/users/{user}', function (App\User $user) {
+    return $user->email;
+});
+
 
