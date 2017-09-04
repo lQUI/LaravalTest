@@ -15,6 +15,10 @@ Route::get('/', function () {
 	return 'Hello World!';
 });
 
+Route::get('/index', function ()  {
+	return view('index');
+});
+
 Route::post('/', function () {
 	return 'get a post requied';
 });
@@ -23,6 +27,7 @@ Route::delete('/', function () {
 	return 'get a delete request';
 });
 
+//Middleware: check the user age .the browser will show 'pass!!!' if age more than 200 
 Route::get('/user', function () {
 	return 'pass!!!';
 })->middleware('checkage');
@@ -57,6 +62,7 @@ Route::get('api/users/{user}', function (App\User $user) {
 	return $user->email;
 });
 
+//the form validaition
 Route::prefix('form') -> group(function () {
 	Route::get('/',function () { 
 		return view ('form');
