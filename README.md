@@ -25,13 +25,14 @@ Finished
 
 4.访问 [http://localhost:8000/form](http://localhost:8000/form),会显示一个表单，该表单的验证规则为：username为必填且必须少于12个字符，age为必填且必须不小于16且不大于100，email可以不填但必须为email格式.通过验证显示“success”
 
-##完成[文档](https://shimo.im/doc/jMyLTKOtyRobZFcB?r=XY7NO9/#magicdomid96)中的任务
+****
+完成[文档](https://shimo.im/doc/jMyLTKOtyRobZFcB?r=XY7NO9/#magicdomid96)中的任务
 
 定义Routes文件在[routes/web.php](https://github.com/lQUI/LaravalTest/tree/master/routes/web.php)
  
 3.1 Basic Parameterized Http Route
 操作步骤：浏览器输入[http://localhost:8000/v3/test-api](http://localhost:8000/v3/test-api),如果没显示任何错误信息，则说明已成功访问到。<br/>
-参考资料：[https://laravel.com/docs/5.4/routing](https://laravel.com/docs/5.4/routing)
+
 
 3.2 Basic Query in Request
 操作步骤：浏览器输入[http://localhost:8000/v3/plus?a=3&b=4](http://localhost:8000/v3/plus?a=3&b=4)，如果访问成功，浏览器会接受到json字符串：'{ret: 1000, version: 3, action: plus, result: 7}'。<br/>
