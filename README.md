@@ -30,20 +30,20 @@ Finished
 定义Routes文件在[routes/web.php](https://github.com/lQUI/LaravalTest/tree/master/routes/web.php)
  
 3.1 Basic Parameterized Http Route
-操作步骤：浏览器输入[http://localhost:8000/v3/test-api](http://localhost:8000/v3/test-api),如果没显示任何错误信息，则说明已成功访问到。
+操作步骤：浏览器输入[http://localhost:8000/v3/test-api](http://localhost:8000/v3/test-api),如果没显示任何错误信息，则说明已成功访问到。<br/>
 参考资料：[https://laravel.com/docs/5.4/routing](https://laravel.com/docs/5.4/routing)
 
 3.2 Basic Query in Request
-操作步骤：浏览器输入[http://localhost:8000/v3/plus?a=3&b=4](http://localhost:8000/v3/plus?a=3&b=4)，如果访问成功，浏览器会接受到json字符串：'{ret: 1000, version: 3, action: plus, result: 7}'。
+操作步骤：浏览器输入[http://localhost:8000/v3/plus?a=3&b=4](http://localhost:8000/v3/plus?a=3&b=4)，如果访问成功，浏览器会接受到json字符串：'{ret: 1000, version: 3, action: plus, result: 7}'。<br/>
 涉及到的文件：[app/Http/Controllers/Arithnetic.php](https://github.com/lQUI/LaravalTest/tree/master/app/Http/Controllers/Arithnetic.php)
 
 3.3 URLEncoded Form in Request
-操作步骤：浏览器输入[http://localhost:8000/v3](http://localhost:8000/v3)，然后显示一个表单，填写表单后，点击’submit'按钮提交表单，如果提交成功，浏览器会接受到json字符串：'{ret: 1000, version: 3, action: plus, result: 7}'。
+操作步骤：浏览器输入[http://localhost:8000/v3](http://localhost:8000/v3)，然后显示一个表单，填写表单后，点击’submit'按钮提交表单，如果提交成功，浏览器会接受到json字符串：'{ret: 1000, version: 3, action: plus, result: 7}'。<br/>
 涉及到的文件：[app/Http/Controllers/Arithnetic.php](https://github.com/lQUI/LaravalTest/tree/master/app/Http/Controllers/Arithnetic.php)
 
 3.4  Html Template Engine Practice
-操作步骤：浏览器输入[/v3/tutorial/student/list](/v3/tutorial/student/list)，然后显示一个student的表格。
-涉及到的文件：[app/Student.php](https://github.com/lQUI/LaravalTest/tree/master/app/Student.php)、[resources/view/student.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/view/student.blade.php)
+操作步骤：浏览器输入[http://localhost:8000/v3/tutorial/student/list](/v3/tutorial/student/list)，然后显示一个student的表格。<br/>
+涉及到的文件：[app/Student.php](https://github.com/lQUI/LaravalTest/tree/master/app/Student.php)、[resources/views/student.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/view/student.blade.php)
 
 
 

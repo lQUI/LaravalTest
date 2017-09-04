@@ -1,4 +1,4 @@
-<form action="plus" method="post">
+<form action="v3/plus" method="post">
 	<?php echo method_field('POST'); ?>
      	<?php echo csrf_field(); ?>
 	<input name='a' type='text'>
