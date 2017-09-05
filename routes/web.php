@@ -11,8 +11,6 @@
 |
 */
 
-use App\Student;
-
 Route::get('/', function () {
     return 'Hello World!';
 });
@@ -90,11 +88,28 @@ Route::prefix('v{version}') -> group(function () {
     Route::match(['get','post'],'{action}', 'Arithnetic@do');
 
     //3.4 Html Template Engine Practice
-    Route::get('/{namespace}/{resource}/{action}', function(){
+    Route::get('{namespace}/{resource}/{action}', function(){
         $students=array(
-            new Student('san', 'zhang', 21),
-            new Student('si', 'li', 35) );
+            new App\Student('san', 'zhang', 21),
+            new App\Student('si', 'li', 35) 
+            );
+
         return view('student', ['students' => $students]);
+    });
+
+    Route::post('{namespace}/{level}/{action}', function ($version,$namespace, $level, $action) {
+        switch ($action) {
+            case 'refresh':
+               App\UserLogger::deleteLog ($namespace) ;
+                break;
+
+            case 'append':
+                App\UserLogger::getLogger ($namespace) -> log  ($level, 'WOW!!! ');
+                break;
+            
+            default:break;
+        }
+        return  ['ret' => 1000];    
     });
 
 }) ;

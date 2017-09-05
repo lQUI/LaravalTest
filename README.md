@@ -43,8 +43,14 @@ Finished
 涉及到的文件：[app/Http/Controllers/Arithnetic.php](https://github.com/lQUI/LaravalTest/tree/master/app/Http/Controllers/Arithnetic.php)
 
 3.4  Html Template Engine Practice<br/>
-操作步骤：浏览器输入[http://localhost:8000/v3/tutorial/student/list](/v3/tutorial/student/list)，然后显示一个student的表格。<br/>
+操作步骤：浏览器输入[http://localhost:8000/v3/tutorial/student/list](http://localhost:8000/v3/tutorial/student/list)，然后显示一个student的表格。<br/>
 涉及到的文件：[app/Student.php](https://github.com/lQUI/LaravalTest/tree/master/app/Student.php)、[resources/views/student.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/view/student.blade.php)
+
+3.5 Logging to Multiple Files Differentiated by Levels<br/>
+操作步骤：浏览器输入[http://localhost:8000/v3](http://localhost:8000/v3#ltmfdbl)将会打开页面，然后选择需要记录的日志的用户名和日志的级别，点击'add'按钮，将会在[storage/logs]下创建一个你选择的用户的日志文件，而且该文件会记录下此次访问的时间，日志的级别和输出信息'WOW!!!'。例如选择用户名为'peter'，那么将会在[storage/logs]创建一个peter.log日志文件。<br/>
+如果点击'delete'按钮，将会把选择的用户的日志文件删除。<br/>
+涉及到的文件：[app/UserLogger.php](https://github.com/lQUI/LaravalTest/tree/master/app/UserLogger.php)、页面：[resources/views/test.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/views/test.blade.php)
+
 
 
 
