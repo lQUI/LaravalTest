@@ -97,6 +97,7 @@ Route::prefix('v{version}') -> group(function () {
         return view('student', ['students' => $students]);
     });
 
+    //3.5 Logging to Multiple Files Differentiated by Levels
     Route::post('{namespace}/{level}/{action}', function ($version,$namespace, $level, $action) {
         switch ($action) {
             case 'refresh':
@@ -113,3 +114,5 @@ Route::prefix('v{version}') -> group(function () {
     });
 
 }) ;
+
+Route::get('{user}/wallet/self/detail','AuthnicationControll@check');

@@ -7,7 +7,7 @@
     <input type='submit' value="submit">
 </form><br/>
 
-<h1>Logging to Multiple Files Differentiated by Levels</h1>
+<h1 id='ltmfdbl'>Logging to Multiple Files Differentiated by Levels</h1>
 user:<select id='userSelect'>
     <option value='peter' selected = "selected" >peter</option>
     <option value='alice'>alice</option>
