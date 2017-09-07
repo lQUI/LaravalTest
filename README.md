@@ -10,10 +10,11 @@ Installation and Use
 <code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>
 <code>$ cd LaravalTest </code><br/>
 <code>$ composer install</code><br/>
-<code>$ ./initMysql.sh </code><br/>##创建该联系需要的数据库数据
+<code>$ ./initMysql.sh </code><br/>##创建该练习需要的数据库数据
 
 然后,需要修改[.env](https://github.com/lQUI/LaravalTest/blob/master/.env)里的mysql连接配置信息.
 
+然后启动运行
 <code>$ php artisan serve</code><br/>
 
 ***
@@ -29,7 +30,7 @@ Finished
 
 4.访问 [http://localhost:8000/form](http://localhost:8000/form),会显示一个表单，该表单的验证规则为：username为必填且必须少于12个字符，age为必填且必须不小于16且不大于100，email可以不填但必须为email格式.通过验证显示“success”
 
-****
+==
 完成[文档](https://shimo.im/doc/jMyLTKOtyRobZFcB?r=XY7NO9/#magicdomid96)中的任务
 
 定义Routes文件在[routes/web.php](https://github.com/lQUI/LaravalTest/tree/master/routes/web.php)
