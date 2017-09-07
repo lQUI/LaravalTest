@@ -30,7 +30,7 @@ Finished
 
 4.访问 [http://localhost:8000/form](http://localhost:8000/form),会显示一个表单，该表单的验证规则为：username为必填且必须少于12个字符，age为必填且必须不小于16且不大于100，email可以不填但必须为email格式.通过验证显示“success”
 
-==
+##
 完成[文档](https://shimo.im/doc/jMyLTKOtyRobZFcB?r=XY7NO9/#magicdomid96)中的任务
 
 定义Routes文件在[routes/web.php](https://github.com/lQUI/LaravalTest/tree/master/routes/web.php)
