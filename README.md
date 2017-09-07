@@ -59,7 +59,7 @@ Finished
 3.6 Hiding Your Authentication Protected Service behind AuthMiddleware<br/>
 操作步骤:浏览器输入[http://localhost:8000/sp100029/wallet/self/detail?intAuthToken=xxxyyyzz](http://localhost:8000/sp100029/wallet/self/detail?intAuthToken=xxxyyyzz),则会显示'Welcome "iphone6" user from "192.168.1.88"!',
 如果输入的是[http://localhost:8000/sp100029/wallet/self/detail](http://localhost:8000/sp100029/wallet/self/detail),则显示'{"ret":1001}';<br/>
-涉及到的文件:[app\User.php](https://github.com/lQUI/LaravalTest/blob/master/app/User.php),[app\Token.php](https://github.com/lQUI/LaravalTest/blob/master/app/Token.php),[resource\views\user.blade.php](https://github.com/lQUI/LaravalTest/blob/master/resources/views/user.blade.php),[app\Http\Controllers\AuthnicationControll.php](https://github.com/lQUI/LaravalTest/blob/master/app/Http/Controllers/AuthnicationControll.php)
+涉及到的文件:[app\User.php](https://github.com/lQUI/LaravalTest/blob/master/app/User.php), [app\Token.php](https://github.com/lQUI/LaravalTest/blob/master/app/Token.php), [resource\views\user.blade.php](https://github.com/lQUI/LaravalTest/blob/master/resources/views/user.blade.php),  [app\Http\Controllers\AuthnicationControll.php](https://github.com/lQUI/LaravalTest/blob/master/app/Http/Controllers/AuthnicationControll.php)
 
 
 
