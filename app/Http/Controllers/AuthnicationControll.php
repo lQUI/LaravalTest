@@ -17,10 +17,10 @@ class AuthnicationControll extends Controller
     {
         $intAuthToken = $request->input('intAuthToken');
         $user = Token::where ('id' ,$user) -> first () ;
-        if  ($user != null || $user-> intAuthToken === $intAuthToken) {
-            $user= User::where('id',$user) -> first ();
+        if  ($user != null && $user-> intAuthToken === $intAuthToken) {
+           // $user= User::where('id',$user->id) -> first ();
             Log::info('find a user:');
-            return view ('\user',['user' =>$user]);
+            return view ('user',['user' =>$user]);
         } else {
             Log::info ('not find any user');
             return ['ret' => 1001];
