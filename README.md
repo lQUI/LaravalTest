@@ -2,16 +2,20 @@
 
 Installation and Use
 ==
-Before installing,you must be sure that  [php7](http://php.net/downloads.php) ,[composer](https://getcomposer.org/download/) and [laravel](https://laravel.com/docs/5.4#installation) are installed.
+在运行项目之前先确保本机已有[php7](http://php.net/downloads.php) ,[composer](https://getcomposer.org/download/), [laravel](https://laravel.com/docs/5.4#installation) 和Mysql.
 
-Also,you can use [this](https://github.com/genxium/Ubuntu14InitScripts/tree/master/backend/php7) to install those;
+可以通过[这里](https://github.com/genxium/Ubuntu14InitScripts)获取你要的安装脚本;<br/>
 
-Then,you can clone my respository with Terminal or CMD<br/>
+然后通过cmd输入<br/>
 <code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>
 <code>$ cd LaravalTest </code><br/>
 <code>$ composer install</code><br/>
+<code>$ ./initMysql.sh </code><br/>##创建该联系需要的数据库数据
+
+然后,需要修改[.env](https://github.com/lQUI/LaravalTest/blob/master/.env)里的mysql连接配置信息.
+
 <code>$ php artisan serve</code><br/>
-and it is working if you can see 'Laravel development server started:<http://127.0.0.1:8000>'
+
 ***
 
 Finished
@@ -44,12 +48,17 @@ Finished
 
 3.4  Html Template Engine Practice<br/>
 操作步骤：浏览器输入[http://localhost:8000/v3/tutorial/student/list](http://localhost:8000/v3/tutorial/student/list)，然后显示一个student的表格。<br/>
-涉及到的文件：[app/Student.php](https://github.com/lQUI/LaravalTest/tree/master/app/Student.php)、[resources/views/student.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/view/student.blade.php)
+涉及到的文件：[app/Student.php](https://github.com/lQUI/LaravalTest/tree/master/app/Student.php)、[resources/views/student.blade.php](https://github.com/lQUI/LaravalTest/blob/master/resources/views/student.blade.php)
 
 3.5 Logging to Multiple Files Differentiated by Levels<br/>
 操作步骤：浏览器输入[http://localhost:8000/v3](http://localhost:8000/v3#ltmfdbl)将会打开页面，然后选择需要记录的日志的用户名和日志的级别，点击'add'按钮，将会在[storage/logs]下创建一个你选择的用户的日志文件，而且该文件会记录下此次访问的时间，日志的级别和输出信息'WOW!!!'。例如选择用户名为'peter'，那么将会在[storage/logs]创建一个peter.log日志文件。<br/>
 如果点击'delete'按钮，将会把选择的用户的日志文件删除。<br/>
 涉及到的文件：[app/UserLogger.php](https://github.com/lQUI/LaravalTest/tree/master/app/UserLogger.php)、页面：[resources/views/test.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/views/test.blade.php)
+
+3.6 Hiding Your Authentication Protected Service behind AuthMiddleware<br/>
+操作步骤:浏览器输入[http://localhost:8000/sp100029/wallet/self/detail?intAuthToken=xxxyyyzz](http://localhost:8000/sp100029/wallet/self/detail?intAuthToken=xxxyyyzz),则会显示'Welcome "iphone6" user from "192.168.1.88"!',
+如果输入的是[http://localhost:8000/sp100029/wallet/self/detail](http://localhost:8000/sp100029/wallet/self/detail),则显示'{"ret":1001}';<br/>
+涉及到的文件:[app\User.php](https://github.com/lQUI/LaravalTest/blob/master/app/User.php),[app\Token.php](https://github.com/lQUI/LaravalTest/blob/master/app/Token.php),[resource\views\user.blade.php](https://github.com/lQUI/LaravalTest/blob/master/resources/views/user.blade.php),[app\Http\Controllers\AuthnicationControll.php](https://github.com/lQUI/LaravalTest/blob/master/app/Http/Controllers/AuthnicationControll.php)
 
 
 

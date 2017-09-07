@@ -32,16 +32,6 @@ Route::get('/user', function () {
     return 'pass!!!';
 })->middleware('checkage');
 
-
-Route::get('/check',function () {
-    return 'pass!!!';
-})->middleware('checkrole:editor');
-
-//Route::get('user/{id}', function ($id) {
-  //  return 'User '.$id;
-//});
-
-
 Route::get('user/{name}', function ($name) {
     return $name;
 })->where('name','[A-Z,a-z]+');

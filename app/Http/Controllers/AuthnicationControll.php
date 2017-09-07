@@ -13,16 +13,16 @@ use App\Token;
 
 class AuthnicationControll extends Controller
 {
-    public function check(Request $request, $user)
+    public function check(Request $request, $id)
     {
         $intAuthToken = $request->input('intAuthToken');
-        $user = Token::where ('id' ,$user) -> first () ;
-        if  ($user != null && $user-> intAuthToken === $intAuthToken) {
-           // $user= User::where('id',$user->id) -> first ();
-            Log::info('find a user:');
-            return view ('user',['user' =>$user]);
+        $token = Token::where('intAuthToken', $intAuthToken)->first();
+        if  ($token != null && $token-> id === $id) {//判断是否已经拿到自己的intAuthToken
+            Log::info('find a user:'.$id);
+            $user = User::find($id);
+            Log::info($user);
+            return view ('user',['user' =>$user,'token' => $token]);
         } else {
-            Log::info ('not find any user');
             return ['ret' => 1001];
         }
     }
