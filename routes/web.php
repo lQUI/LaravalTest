@@ -19,14 +19,6 @@ Route::get('/index', function ()  {
     return view('index');
 });
 
-Route::post('/', function () {
-    return 'get a post requied';
-});
-
-Route::delete('/', function () {
-    return 'get a delete request';
-});
-
 //Middleware: check the user age .the browser will show 'pass!!!' if age more than 200 
 Route::get('/user', function () {
     return 'pass!!!';
@@ -35,22 +27,6 @@ Route::get('/user', function () {
 Route::get('user/{name}', function ($name) {
     return $name;
 })->where('name','[A-Z,a-z]+');
-
-Route::domain('{acount}.myapp.com')->group(function () {
-    Route::get('user/{id}',function ($account,$id) {
-        return $account.$id;
-    });
-});
-
-Route::prefix('admin')->group(function () {
-    Route::get('users', function () {
-        return 'admin user';
-    });
-});
-
-Route::get('api/users/{user}', function (App\User $user) {
-    return $user->email;
-});
 
 //
 Route::prefix('form') -> group(function () {
