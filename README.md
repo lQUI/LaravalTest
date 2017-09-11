@@ -10,7 +10,8 @@ Installation and Use
 <code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>
 <code>$ cd LaravalTest </code><br/>
 <code>$ composer install</code><br/>
-<code>$ ./initMysql.sh ##创建该练习需要的数据库数据</code><br/>
+<code>$ php artisan migrate            ##新建该练习需要的数据库表</code><br/>
+<code>$ ./insert_example_data.sql.sh   ##导入该练习需要的样本数据</code><br/>
 
 然后,需要修改[.env](https://github.com/lQUI/LaravalTest/blob/master/.env)里的mysql连接配置信息.
 
