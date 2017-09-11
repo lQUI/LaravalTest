@@ -57,7 +57,7 @@ Finished
 涉及到的文件：[app/UserLogger.php](https://github.com/lQUI/LaravalTest/tree/master/app/UserLogger.php)、页面：[resources/views/test.blade.php](https://github.com/lQUI/LaravalTest/tree/master/resources/views/test.blade.php)
 
 3.6 Hiding Your Authentication Protected Service behind AuthMiddleware<br/>
-实现过程:该例子中并没有提供登陆的实现,这里主要根据用户拿到intAuthToken和id通过[app\Http\Controllers\AuthnicationControll.php](https://github.com/lQUI/LaravalTest/blob/master/app/Http/Controllers/AuthnicationControll.php)进行判断,首先根据intAuthToken去token表查询是否有数据,如果有在判断查到的数据里的id是否与request提供的id一致,若一致说明已经登陆了.
+实现过程:该例子中并没有提供登陆的实现,这里主要根据用户拿到intAuthToken和id通过[app\Http\Controllers\AuthnicationControll.php](https://github.com/lQUI/LaravalTest/blob/master/app/Http/Controllers/AuthnicationControll.php)进行判断,首先根据intAuthToken去token表查询是否有数据,如果有在判断查到的数据里的id是否与request提供的id一致,若一致说明已经登陆了.<br/>
 操作步骤:浏览器输入[http://localhost:8000/sp100029/wallet/self/detail?intAuthToken=xxxyyyzz](http://localhost:8000/sp100029/wallet/self/detail?intAuthToken=xxxyyyzz),则会显示'Welcome "iphone6" user from "192.168.1.88"!',
 如果输入的是[http://localhost:8000/sp100029/wallet/self/detail](http://localhost:8000/sp100029/wallet/self/detail),则显示'{"ret":1001}';<br/>
 涉及到的文件:[app\User.php](https://github.com/lQUI/LaravalTest/blob/master/app/User.php), [app\Token.php](https://github.com/lQUI/LaravalTest/blob/master/app/Token.php), [resource\views\user.blade.php](https://github.com/lQUI/LaravalTest/blob/master/resources/views/user.blade.php),  [app\Http\Controllers\AuthnicationControll.php](https://github.com/lQUI/LaravalTest/blob/master/app/Http/Controllers/AuthnicationControll.php)
