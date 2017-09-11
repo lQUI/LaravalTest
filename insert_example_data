@@ -1,0 +1,10 @@
+#!/bin/bash
+#create table user and init table;
+if [ $# -ne 1 ]; then 
+    echo '输入数据导入的数据库名:insert_example_data [database]' 
+    exit 1
+fi
+database=$1
+password=
+mysql -u root -p$password -D $database < ./insert_example_data.sql
+
