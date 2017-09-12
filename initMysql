@@ -12,9 +12,9 @@ read -t 30 -s -p '输入数据库root用户的密码:'  password
 
 if [ "$answer" = "N"  -o "$answer" = "n" ]
 then
-    mysql -u $username -p$password -D $database < ./create_schame.sql
+    mysql -u $username -p$password -D $database < ./create_schema.sql
 else
-    mysql -u $username -p$password -D $database < ./create_schame.sql 
+    mysql -u $username -p$password -D $database < ./create_schema.sql 
     mysql -u $username -p$password -D $database <./insert_example_data.sql
    
 fi
