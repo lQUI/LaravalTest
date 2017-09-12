@@ -2,9 +2,9 @@
 
 Installation and Use
 ==
-在运行项目之前先确保本机已有[php7](http://php.net/downloads.php) ,[composer](https://getcomposer.org/download/), [laravel](https://laravel.com/docs/5.4#installation) 和Mysql.
+在运行项目之前先确保本机已有[php7](http://php.net/downloads.php) ,[composer](https://getcomposer.org/download/), [laravel](https://laravel.com/docs/5.4#installation) 和[Mysql](https://dev.mysql.com/doc/refman/5.7/en/installing.html).
 
-可以通过[这里](https://github.com/genxium/Ubuntu14InitScripts)获取你要的安装脚本;<br/>
+可以通过[这里php环境配置脚本](https://github.com/genxium/Ubuntu14InitScripts/tree/master/backend/php7)和[mysql配置脚本](https://github.com/genxium/Ubuntu14InitScripts/tree/master/database/mysql)<br/>
 
 然后通过cmd输入<br/>
 <code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>

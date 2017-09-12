@@ -7,7 +7,7 @@ fi
 database=$1
 username=$2 
 read -p '是否需要导入样本数据：（y/n）默认为y:' answer
-read -t 30 -s -p '输入数据库root用户的密码:'  password
+read -t 30 -s -p "输入数据库$username用户的密码:"  password
 
 
 if [ "$answer" = "N"  -o "$answer" = "n" ]
