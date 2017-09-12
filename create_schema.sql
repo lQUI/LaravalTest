@@ -1,6 +1,6 @@
 drop table if exists users;
 
-create table  users (id varchar(32),name varchar(32),age int,created_at datetime, updated_at datetime,email varchar(32));
+create table  user (id varchar(32),name varchar(32),age int,created_at datetime, updated_at datetime,email varchar(32));
 
 drop table if exists token;
 

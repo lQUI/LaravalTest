@@ -10,7 +10,7 @@ Installation and Use
 <code>$ git clone https://github.com/lQUI/LaravalTest</code><br/>
 <code>$ cd LaravalTest </code><br/>
 <code>$ composer install</code><br/>
-<code>$ ./initMysql            ##初始化数据库当然也可以采用[migrate](https://github.com/lQUI/LaravalTest/tree/migrate)生成schema</code><br/>
+<code>$ ./create_mysql_schema_and_sample_data.sh [database] [username]          ##初始化数据库当然也可以采用[migrate](https://github.com/lQUI/LaravalTest/tree/migrate)生成schema</code><br/>
 
 然后,需要修改[.env](https://github.com/lQUI/LaravalTest/blob/master/.env)里的mysql连接配置信息.
 
